@@ -21,7 +21,7 @@ namespace BankAccountSimulatorDebug
         public static decimal Withdraw(decimal account, decimal amount)
         {
             decimal output = account - amount;
-            Console.WriteLine("");
+            Console.WriteLine($"You withdrew {amount}. You have {output} left");
 
             return output;
         }
