@@ -1,5 +1,5 @@
 ﻿
-
+using BankAccountSimulatorDebug;
 
 /*
  * 
@@ -12,3 +12,9 @@
  * Debug edge cases, such as withdrawing more money than the account balance.
  * 
  */
+decimal checkingsBal = BankLogic.checkingAccountBalance;
+
+Console.WriteLine("\nBank Account");
+Console.WriteLine($"Checkings: ${checkingsBal}");
+
+
