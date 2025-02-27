@@ -46,13 +46,13 @@ do
                 switch (userChoice)
                 {
                     case "1":
-                        BankLogic.Deposit(checkingBal);
+                        checkingBal = BankLogic.Deposit(checkingBal);
                         break;
                     case "2":
-                        BankLogic.Withdraw(checkingBal);
+                        checkingBal = BankLogic.Withdraw(checkingBal);
                         break;
                     case "3":
-                        BankLogic.CheckBalance(checkingBal);
+                        checkingBal = BankLogic.CheckBalance(checkingBal);
                         break;
                     case "4":
                         break;
@@ -73,13 +73,13 @@ do
                 switch (userChoice)
                 {
                     case "1":
-                        BankLogic.Deposit(savingsBal);
+                        savingsBal = BankLogic.Deposit(savingsBal);
                         break;
                     case "2":
-                        BankLogic.Withdraw(savingsBal);
+                        savingsBal = BankLogic.Withdraw(savingsBal);
                         break;
                     case "3":
-                        BankLogic.CheckBalance(savingsBal);
+                        savingsBal = BankLogic.CheckBalance(savingsBal);
                         break;
                     case "4":
                         break;

@@ -36,9 +36,10 @@ namespace BankAccountSimulatorDebug
             else
             {
                output = account - withdrawAmount;
+                Console.WriteLine($"You withdrew {withdrawAmount}");
             }
               
-            Console.WriteLine($"You withdrew {withdrawAmount}");
+            
 
             return output;
            
