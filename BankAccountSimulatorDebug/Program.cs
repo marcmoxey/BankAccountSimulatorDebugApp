@@ -18,6 +18,7 @@ decimal savingsBal = BankLogic.savingsAccountBalance;
 Console.WriteLine("\nBank Account");
 Console.WriteLine($"Checking:\t${checkingBal}");
 Console.WriteLine($"Savings:\t${savingsBal}");
+Console.WriteLine();
 
 string userChoice;
 

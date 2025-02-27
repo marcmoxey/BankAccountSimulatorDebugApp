@@ -22,7 +22,7 @@ namespace BankAccountSimulatorDebug
         public static decimal Withdraw(decimal account)
         {
             decimal output = 0;
-            Console.Write("How much do you want to withdraw");
+            Console.Write("How much do you want to withdraw: ");
             string withdrawAmountText = Console.ReadLine();
             if(!decimal.TryParse(withdrawAmountText, out decimal  withdrawAmount))
             {
@@ -47,7 +47,7 @@ namespace BankAccountSimulatorDebug
         public static decimal Deposit(decimal account)
         {
             decimal output;
-            Console.Write("How much do you want to withdraw");
+            Console.Write("How much do you want to deposit: ");
             string depositAmountText = Console.ReadLine();
             if (!decimal.TryParse(depositAmountText, out decimal depositAmount))
             {
