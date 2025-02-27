@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,12 +19,46 @@ namespace BankAccountSimulatorDebug
             return account;
         }
 
-        public static decimal Withdraw(decimal account, decimal amount)
+        public static decimal Withdraw(decimal account)
         {
-            decimal output = account - amount;
-            Console.WriteLine($"You withdrew {amount}. You have {output} left");
+            decimal output = 0;
+            Console.Write("How much do you want to withdraw");
+            string withdrawAmountText = Console.ReadLine();
+            if(!decimal.TryParse(withdrawAmountText, out decimal  withdrawAmount))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid number");
+            }
+
+            if(withdrawAmount > account)
+            {
+                Console.WriteLine("You can't withdraw that amount!");
+            }
+            else
+            {
+               output = account - withdrawAmount;
+            }
+              
+            Console.WriteLine($"You withdrew {withdrawAmount}");
 
             return output;
+           
+        }
+
+        public static decimal Deposit(decimal account)
+        {
+            decimal output;
+            Console.Write("How much do you want to withdraw");
+            string depositAmountText = Console.ReadLine();
+            if (!decimal.TryParse(depositAmountText, out decimal depositAmount))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid number");
+            }
+
+            output = account + depositAmount;
+            Console.WriteLine($"You deposited {depositAmount}");
+
+            return output;
+         
         }
     }
 }
